@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+BLDPATH := obj-$(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+export DH_GOPKG := bitbucket.org/r_rudi/gostat
+
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_install:
+	dh_auto_install -O-buildsystem=golang \
+		--destdir=${CURDIR}/debian/golang-gostat-dev/
+	rm -rf ${CURDIR}/debian/golang-gostat-dev/usr/bin
+
+	install -d ${CURDIR}/debian/gostat/usr/bin
+	test -f ${CURDIR}/${BLDPATH}/bin/gostat && \
+	install -m 0755 ${CURDIR}/${BLDPATH}/bin/gostat ${CURDIR}/debian/gostat/usr/bin/

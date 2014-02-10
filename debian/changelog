@@ -1,0 +1,5 @@
+gostat (0.0~hg20140126+28-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Mon, 10 Feb 2014 21:09:36 +0900

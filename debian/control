@@ -1,0 +1,24 @@
+Source: gostat
+Section: admin
+Priority: extra
+Maintainer: Kouhei Maeda <mkouhei@palmtb.net>
+Build-Depends: debhelper (>= 9.0.0), dh-golang, golang-go, golang-config-dev, golang-mqtt-dev
+Standards-Version: 3.9.5
+Homepage: https://bitbucket.org/r_rudi/gostat
+
+Package: gostat
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: monitoring systems 
+ GoStat is monitoring systems which is written in golang.
+ GoStat allow you to view some of your system resources in real-time as
+ following, load avg, cpu, memory, aio.
+
+Package: golang-gostat-dev
+Section: devel
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, golang-go
+Description: Library of gostat as monitoring systems
+ Library of GoStat is monitoring systems which is written in golang.
+ GoStat allow you to view some of your system resources in real-time as
+ following, load avg, cpu, memory, aio.
