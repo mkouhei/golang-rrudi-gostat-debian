@@ -1,8 +1,8 @@
-Source: gostat
+Source: golang-rrudi-gostat
 Section: admin
 Priority: extra
 Maintainer: Kouhei Maeda <mkouhei@palmtb.net>
-Build-Depends: debhelper (>= 9.0.0), dh-golang, golang-go, golang-config-dev, golang-mqtt-dev
+Build-Depends: debhelper (>= 9.0.0), dh-golang, golang-go, golang-msbranco-goconfig-dev, golang-huin-mqtt-dev
 Standards-Version: 3.9.5
 Homepage: https://bitbucket.org/r_rudi/gostat
 
@@ -14,7 +14,7 @@ Description: monitoring systems
  GoStat allow you to view some of your system resources in real-time as
  following, load avg, cpu, memory, aio.
 
-Package: golang-gostat-dev
+Package: golang-rrudi-gostat-dev
 Section: devel
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, golang-go

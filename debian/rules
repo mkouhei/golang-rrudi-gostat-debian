@@ -13,8 +13,8 @@ export DH_GOPKG := bitbucket.org/r_rudi/gostat
 
 override_dh_auto_install:
 	dh_auto_install -O-buildsystem=golang \
-		--destdir=${CURDIR}/debian/golang-gostat-dev/
-	rm -rf ${CURDIR}/debian/golang-gostat-dev/usr/bin
+		--destdir=${CURDIR}/debian/golang-rrudi-gostat-dev/
+	rm -rf ${CURDIR}/debian/golang-rrudi-gostat-dev/usr/bin
 
 	install -d ${CURDIR}/debian/gostat/usr/bin
 	test -f ${CURDIR}/${BLDPATH}/bin/gostat && \
